@@ -1,0 +1,794 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* ******************
+HEADER */
+
+nav {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+nav * {
+  cursor: pointer;
+}
+
+.logo-nav {
+  width: 93px;
+  height: 50px;
+}
+
+nav button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-weight: 700;
+}
+nav button:hover {
+  background-color: white;
+  color: black;
+  border-bottom: 3px solid white;
+}
+
+.nav-container {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+
+.lens-nav {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+}
+.user-nav {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+}
+
+.container-btns {
+  display: flex;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 51px;
+  left: 50%;
+  width: 20rem;
+  height: 20rem;
+  background-color: white;
+  color: black;
+  transform: translate(-50%);
+  padding: 2rem;
+  font-size: 1rem;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* **************
+HERO SECTION */
+
+.section-hero {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.promo {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  background: #f86531;
+  background: radial-gradient(ellipse at center, #f86531 0, #b23004 100%);
+  padding: 1rem 2rem;
+}
+
+.promo h2 {
+  font-size: 2.375rem;
+  color: white;
+  font-weight: 800;
+}
+
+.hero-btn-shop {
+  width: 11rem;
+  height: 3rem;
+  margin-left: 2rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: white;
+  background-color: #31164d;
+  border: 2px solid #31164d;
+  border-radius: 30px;
+}
+
+.hero-btn-shop:hover {
+  cursor: pointer;
+}
+
+.hero {
+  background-image: url('https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3B7cGKvhoegY9kOV6OKQcp/0e3ba32959c58e4df569b943b8a0d0cc/R6Ex_keyart__1_.jpg');
+  background-size: cover;
+  height: 43rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0 5rem;
+}
+
+.hero h1 {
+  text-align: center;
+  color: white;
+  margin-top: 8rem;
+  font-size: 3rem;
+  font-weight: 900;
+  text-shadow: 4px 4px 5px black;
+}
+
+.hero p {
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.hero-btn {
+  background-color: rgb(13, 46, 63);
+  color: white;
+  font-weight: 900;
+  height: 54px;
+  width: 260px;
+  border-radius: 30px;
+  border: 2px solid rgb(13, 46, 63);
+  margin: 2rem 1rem;
+  cursor: pointer;
+  transition: 3s ease-in;
+}
+
+.hero-btn:hover {
+  border: none;
+}
+
+.radial-out {
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.radial-out:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(227, 215, 215, 0.56);
+  border-radius: 100%;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition: 300ms ease-out;
+  transition: 300ms ease-out;
+}
+.radial-out:hover:before {
+  -webkit-transform: scale(2);
+  transform: scale(2);
+}
+
+.hero-links {
+  display: flex;
+  gap: 2rem;
+  position: relative;
+}
+
+.hero-links img {
+  width: 40%;
+  cursor: pointer;
+  padding-bottom: 2rem;
+}
+
+.hero-btn-carousel {
+  background: none;
+  border: none;
+  color: grey;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 8rem 1rem 0 1rem;
+  cursor: pointer;
+}
+
+.hero-btn-arrow-left {
+  position: absolute;
+  left: -5rem;
+  bottom: 1rem;
+  width: 6rem;
+  height: 4rem;
+  text-align: end;
+  padding-right: 2rem;
+  padding-bottom: 4rem;
+  font-size: 5rem;
+  background-color: rgba(59, 62, 64, 0.765);
+  border: none;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.hero-btn-arrow-left:hover {
+  background-color: rgba(95, 100, 103, 0.765);
+}
+
+.hero-btn-arrow-right {
+  position: absolute;
+  right: -5rem;
+  bottom: 1rem;
+  width: 6rem;
+  height: 4rem;
+  text-align: start;
+  padding-left: 2rem;
+  padding-bottom: 4rem;
+  font-size: 5rem;
+  background-color: rgba(59, 62, 64, 0.765);
+  border: none;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.hero-btn-arrow-right:hover {
+  background-color: rgba(95, 100, 103, 0.765);
+}
+
+.icon-arrow-left {
+  fill: white;
+  width: 1rem;
+  margin-bottom: 1.8rem;
+}
+.icon-arrow-right {
+  fill: white;
+  width: 1rem;
+  margin-bottom: 1.8rem;
+}
+
+/* **************
+MORE GAMES SECTION */
+
+.section-more-games {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 3rem;
+  background-color: #f0f3f4;
+}
+
+.section-more-games h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: black;
+}
+
+.games {
+  display: flex;
+  gap: 2.5rem;
+}
+.games picture {
+  padding: 0 0.4rem;
+}
+
+.img-game {
+  width: 10rem;
+}
+
+.games h4 {
+  margin-top: 0.5rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 5rem;
+}
+
+.img-icon {
+  width: 1.5rem;
+}
+
+.container-icon {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.games-btns {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.games-btn {
+  width: 14rem;
+  height: 3rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: white;
+  background-color: #d80388;
+  border: 2px solid #d80388;
+  border-radius: 30px;
+}
+
+.games-btn:hover {
+  transition: all 0.25s ease 0s;
+  background: #fff;
+  color: #d80388;
+}
+
+.games-btn-arrow-left {
+  position: absolute;
+  left: -33rem;
+  bottom: 0rem;
+  width: 6rem;
+  height: 4rem;
+  text-align: end;
+  padding-right: 2rem;
+  padding-bottom: 4rem;
+  font-size: 5rem;
+  background-color: rgba(59, 62, 64, 0.765);
+  border: none;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.games-btn-arrow-left:hover {
+  background-color: rgba(95, 100, 103, 0.765);
+}
+
+.games-btn-arrow-right {
+  position: absolute;
+  right: -33rem;
+  bottom: 0rem;
+  width: 6rem;
+  height: 4rem;
+  text-align: start;
+  padding-left: 2rem;
+  padding-bottom: 4rem;
+  font-size: 5rem;
+  background-color: rgba(59, 62, 64, 0.765);
+  border: none;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.games-btn-arrow-right:hover {
+  background-color: rgba(95, 100, 103, 0.765);
+}
+
+/* **************
+NEWS SECTION */
+
+.section-news {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 0;
+  background-color: white;
+}
+
+.section-news h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: black;
+}
+
+.container-news {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.container-news a {
+  text-decoration: none;
+  font-weight: 300;
+  color: #d80388;
+}
+
+.container-news a:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+a:first-child {
+  font-weight: 700;
+}
+
+.grid-news {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  row-gap: 1rem;
+}
+
+.grid-news div {
+  padding: 1rem;
+}
+
+#primo {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+#secondo {
+  grid-row-end: -1;
+}
+
+#prima-img {
+  width: 100%;
+}
+
+.grid-news span {
+  font-weight: 100;
+  font-size: 0.7rem;
+}
+
+.grid-news h5 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.8px;
+}
+
+.grid-div {
+  display: flex;
+}
+
+.grid-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.grid-image {
+  width: 50%;
+}
+
+/* **************
+STORE SECTION */
+
+.section-store {
+  background-color: #f0f3f4;
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.section-store h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: black;
+  margin-bottom: 2rem;
+}
+
+.container-store {
+  display: flex;
+}
+
+.container-store a {
+  position: relative;
+}
+
+.container-store img {
+  width: 90%;
+}
+
+.container-store p {
+  position: absolute;
+  font-size: 1.5rem;
+  top: 1.5rem;
+  left: 4rem;
+  font-weight: 700;
+  color: white;
+}
+
+.container-store p:hover {
+  text-decoration: underline;
+}
+
+/* **************
+INSIDE SECTION */
+
+.section-inside {
+  background-color: white;
+  padding: 3rem;
+  text-align: center;
+}
+
+.section-inside h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: black;
+  margin-bottom: 2rem;
+}
+
+.container-inside {
+  display: flex;
+  gap: 1rem;
+}
+
+.container-inside picture {
+  height: 24rem;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.container-inside picture p {
+  font-size: 1rem;
+  color: white;
+  padding: 2rem;
+  margin-top: 18rem;
+  background-color: #0e0e0f76;
+  font-size: 1rem;
+  top: 1.5rem;
+  left: 4rem;
+  font-weight: 700;
+}
+
+#pic-1 {
+  background-image: url(https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1eols1lZ8UPudehGH9BGhD/51f5bfa760888011d318a8fe309e34c0/ubi-inside_ubisoft-inclusive-workplace.jpg);
+  background-size: contain;
+}
+
+#pic-2 {
+  background-image: url(https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2hIEL2YM0y7GZuq1wuwy7P/91ddea7c1dcb5362abcbd55c8424c176/ubi-inside_ubisoft-greenweeks.jpg);
+  background-size: contain;
+}
+
+#pic-3 {
+  background-image: url(https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6peGPMWPvJS6d2XpHsP5V1/697300a6e1cfac9ff755ec1bfed452b8/ubi-inside_ubisoft-fawzi_mesmar.jpg);
+  background-size: contain;
+}
+
+/* **************
+VIDEO SECTION */
+
+.section-video {
+  background-color: #f0f3f4;
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.section-video h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: black;
+  margin-bottom: 2rem;
+}
+
+.video {
+  display: flex;
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+.icon-rel {
+  position: relative;
+}
+
+.video-img {
+  width: 100%;
+}
+
+.video p {
+  letter-spacing: 1px;
+  margin-top: 0.5rem;
+  font-weight: 700;
+  text-align: start;
+}
+
+.video-play {
+  width: 67px;
+  position: absolute;
+  z-index: 1;
+  left: 10rem;
+  top: 5rem;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+/* **************
+CONNECT SECTION */
+
+.section-connect {
+  background-color: #f0f3f4;
+  padding-top: 3rem;
+  background-color: #091225;
+  position: relative;
+}
+
+.grid-connect {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.grid-connect img {
+  width: 100%;
+}
+
+.connect {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 3rem;
+  gap: 2rem;
+}
+
+.connect h2 {
+  color: white;
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.connect p {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 400;
+}
+
+.connect button {
+  width: 14rem;
+  height: 3rem;
+  background-color: #006ef5;
+  color: white;
+  font-size: 1rem;
+  border: 1px solid #006ef5;
+  border-radius: 30px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.triangle-down {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 30px solid #f0f3f4;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.bar-container {
+  height: 50px;
+  background-color: black;
+}
+
+.bar-bottom {
+  display: flex;
+  width: 62%;
+  height: 100%;
+  padding-left: 3rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bar-bottom p {
+  color: white;
+}
+
+.bar-logos img {
+  width: 30px;
+  margin-left: 2rem;
+}
+
+/* **************
+FOOTER */
+
+footer {
+  background-color: #1d1e22;
+  padding: 3rem;
+}
+
+.row-1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon-ubisoft-logo-desktop {
+  width: 10%;
+}
+
+.st0 {
+  fill: white;
+}
+
+.btn-glob {
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon-glob {
+  margin-top: 2px;
+
+  background-color: black;
+}
+
+.btn-glob h3 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 800;
+  display: inline;
+}
+
+.row-2 {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
+}
+
+.row-2 ul {
+  list-style: none;
+}
+
+.row-2 li {
+  padding-bottom: 1rem;
+}
+
+.link-white {
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.link-gray {
+  color: gray;
+  font-size: 0.8rem;
+}
+
+#div-5 {
+  text-align: end;
+}
+
+#div-5 p {
+  color: white;
+  font-size: 0.7rem;
+  padding-top: 2rem;
+  padding-left: 3rem;
+}
