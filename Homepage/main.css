@@ -726,6 +726,7 @@ footer {
 .row-1 {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 4rem;
 }
 
 .icon-ubisoft-logo-desktop {
