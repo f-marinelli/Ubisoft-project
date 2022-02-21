@@ -1,0 +1,562 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* ******************
+HEADER */
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.nav-black {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4rem;
+}
+
+.nav-black * {
+  cursor: pointer;
+}
+
+.logo-nav {
+  width: 93px;
+  height: 50px;
+}
+
+.nav-black button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-weight: 700;
+}
+
+.nav-black button:hover {
+  background-color: white;
+  color: black;
+  border-bottom: 3px solid white;
+}
+
+.nav-container {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+
+.lens-nav {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+}
+.user-nav {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+}
+
+.container-btns {
+  display: flex;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 51px;
+  left: 50%;
+  width: 20rem;
+  height: 20rem;
+  background-color: white;
+  color: black;
+  transform: translate(-50%);
+  padding: 2rem;
+  font-size: 1rem;
+  z-index: 3;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.nav-white {
+  background-color: white;
+  height: 50px;
+}
+
+.nav-container-btns {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 2rem;
+  height: 100%;
+}
+
+.nav-container-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 2rem;
+}
+
+.btn-show {
+  border: none;
+  background: none;
+  color: #d80388;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.nav-container-btn:hover .hidden-btns {
+  display: block;
+}
+
+.hidden-btns {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 15rem;
+  padding: 0.5rem 2rem 1rem 2rem;
+  background-color: white;
+}
+
+.btn-show {
+  border: none;
+  background: none;
+  color: #d80388;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.btn-hidden {
+  border: none;
+  background: none;
+  color: #d80388;
+  font-size: 1rem;
+  font-weight: 800;
+  padding-bottom: 1.5rem;
+  display: block;
+  cursor: pointer;
+}
+
+.btn-hidden:hover {
+  color: black;
+}
+
+/* **************** 
+SECTION HERO  */
+
+.section-hero {
+  margin-top: 100px;
+}
+
+.hero-background {
+  background-image: url(https://staticctf.akamaized.net/8aefmxkxpxwl/5NJ2LKnCd3DpgBSthSCrdb/f6a4deea816370d86bc567f4593f5b85/Eivor_female.png?w=1920);
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-background:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 100px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+
+.hero-background h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  color: white;
+  z-index: 1;
+}
+
+.hero-list {
+  padding: 2rem 5rem;
+  text-align: center;
+}
+
+.section-hero ul {
+  list-style: none;
+}
+
+.section-hero a {
+  text-decoration: none;
+  color: #575fcf;
+  font-weight: 900;
+}
+
+.section-hero li {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+/* **************** 
+CALENDAR SECTION  */
+
+.section {
+  padding: 3rem 0;
+}
+
+.container-2col {
+  display: flex;
+  gap: 1rem;
+}
+
+.container-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 50%;
+}
+
+.title-h2 {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.container-calendar {
+  background-color: #f6f7fb;
+  width: 100%;
+  padding: 2rem 2rem;
+  height: 100%;
+}
+
+.title-h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding-bottom: 0.5rem;
+}
+
+.a-box {
+  display: block;
+  text-decoration: none;
+  width: 100%;
+  padding: 1rem 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.a-box:hover {
+  background-color: #dbd9d9;
+}
+
+.a-box span {
+  display: inline;
+  font-size: 2rem;
+  color: black;
+  padding: 0.5rem 0.5rem;
+}
+
+.container-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.container-text h4 {
+  color: #575fcf;
+  font-size: 1.2rem;
+}
+
+.container-text p {
+  color: black;
+  font-size: 0.8rem;
+}
+
+.event-row {
+  display: flex;
+  gap: 2rem;
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.event-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.event-date {
+  font-weight: 400;
+}
+
+.dot {
+  font-size: 2rem;
+  height: 1rem;
+  position: absolute;
+  top: -9px;
+  left: 18.5%;
+}
+
+.p-line {
+  font-weight: 100;
+  padding-left: 2px;
+}
+
+.container-btn {
+  padding-top: 3rem;
+  text-align: center;
+}
+
+.calendar-btn {
+  width: 25%;
+  background-color: #575fcf;
+  color: white;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  border: 2px solid #575fcf;
+  border-radius: 50px;
+  padding: 1.5rem 2rem;
+}
+
+/* **************** 
+ACCORDION  SECTION  */
+
+.section-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.container-accordion {
+  margin: 2rem 0;
+}
+
+.title-h2-center {
+  text-align: center;
+}
+
+input {
+  display: none;
+}
+
+label {
+  display: block;
+  padding: 2rem 2rem;
+  cursor: pointer;
+  background: #f6f7fb;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.content {
+  background: #f6f7fb;
+  border: 1px solid #f6f7fb;
+  padding: 10px 25px;
+}
+
+input + label + .content {
+  display: none;
+}
+
+input:checked + label + .content {
+  display: block;
+}
+
+.cont-acc-cal {
+  display: flex;
+}
+
+.select-year {
+  color: #575fcf;
+  border: none;
+  border-bottom: 3px solid #575fcf;
+  background-color: #f6f7fb;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.pagination button {
+  background: none;
+  border: none;
+  color: #575fcf;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.pagination button:hover {
+  background-color: #dbd9d9;
+}
+
+.pagination button:nth-child(2) {
+  border-bottom: 2px solid #575fcf;
+}
+
+/* **************** 
+IMPACT SECTION  */
+
+.container-impact {
+  display: flex;
+  height: 30rem;
+  margin-bottom: 3rem;
+}
+
+.impact {
+  width: 50%;
+}
+
+.impact-text {
+  padding: 5rem 3rem;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.impact-text h3 {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.impact-text button {
+  width: 40%;
+  padding: 1.5rem;
+  border: none;
+  border-radius: 40px;
+  background-color: #d80388;
+  color: white;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.img-bck {
+  background-image: url(https://staticctf.akamaized.net/8aefmxkxpxwl/2NUII6TTk9F8Z76pXoj7aP/6728a2f9d7d53915e6a702df0bf5af5d/Image_AC.png?w=1920);
+  background-size: cover;
+  background-position: center;
+}
+
+/* **************
+FOOTER */
+
+.bar-container {
+  height: 50px;
+  background-color: black;
+}
+
+.bar-bottom {
+  display: flex;
+  width: 62%;
+  height: 100%;
+  padding-left: 3rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bar-bottom p {
+  color: white;
+}
+
+.bar-logos img {
+  width: 30px;
+  margin-left: 2rem;
+}
+
+footer {
+  background-color: #1d1e22;
+  padding: 3rem;
+}
+
+.row-1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon-ubisoft-logo-desktop {
+  width: 10%;
+}
+
+.st0 {
+  fill: white;
+}
+
+.btn-glob {
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon-glob {
+  margin-top: 2px;
+
+  background-color: black;
+}
+
+.btn-glob h3 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 800;
+  display: inline;
+}
+
+.row-2 {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
+}
+
+.row-2 ul {
+  list-style: none;
+}
+
+.row-2 li {
+  padding-bottom: 1rem;
+}
+
+.link-white {
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.link-gray {
+  color: gray;
+  font-size: 0.8rem;
+}
+
+#div-5 {
+  text-align: end;
+}
+
+#div-5 p {
+  color: white;
+  font-size: 0.7rem;
+  padding-top: 2rem;
+  padding-left: 3rem;
+}
